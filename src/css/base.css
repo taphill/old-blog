@@ -1,0 +1,63 @@
+:root {
+  --sans-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
+  --mono-font: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+
+  --base-size: 1rem;
+
+  --size-100: calc(var(--base-size) * 0.512);
+  --size-200: calc(var(--base-size) * 0.64);
+  --size-300: calc(var(--base-size) * 0.8);
+  --size-400: var(--base-size);
+  --size-500: calc(var(--base-size) * 1.25);
+  --size-600: calc(var(--base-size) * 1.563);
+  --size-700: calc(var(--base-size) * 1.953);
+  --size-800: calc(var(--base-size) * 2.441);
+  --size-900: calc(var(--base-size) * 3.052);
+
+  --color-bg: #e9e9ea;
+  --color-fg: #282c34;
+  --color-grey-1: #d4d4d6;
+  --color-grey-2: #a9aaad;
+  --color-grey-3: #7e8085;
+  --color-grey-4: #52565c;
+  --color-primary: deeppink;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #282c34;
+    --color-fg: #e9e9ea;
+  }
+}
+
+body {
+  color: var(--color-fg);
+  background: var(--color-bg);
+  font-family: var(--sans-font);
+  font-size: var(--size-400);
+}
+
+h1 {
+  color: var(--color-fg);
+  font-size: var(--size-600);
+  font-weight: 600;
+  max-width: 15ch;
+  line-height: 1.1;
+}
+
+h2,
+h3 {
+  color: var(--color-fg);
+  font-size: var(--size-500);
+  font-weight: 600;
+  max-width: 25ch;
+  line-height: 1.1;
+}
+
+a {
+  color: var(--color-primary);
+}
