@@ -1,9 +1,7 @@
 :root {
-  --sans-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  --sans-font: 'Asap', sans-serif;
 
-  --mono-font: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  --mono-font: Consolas, source-code-pro, Menlo, Monaco, "Courier New",
     monospace;
 
   --base-size: 1rem;
@@ -18,46 +16,107 @@
   --size-800: calc(var(--base-size) * 2.441);
   --size-900: calc(var(--base-size) * 3.052);
 
-  --color-bg: #e9e9ea;
-  --color-fg: #282c34;
+  --color-bg: white;
+  --color-fg: #5f4b66;
+  --color-text: black;
   --color-grey-1: #d4d4d6;
   --color-grey-2: #a9aaad;
   --color-grey-3: #7e8085;
   --color-grey-4: #52565c;
-  --color-primary: deeppink;
+  --color-primary: #005248;
+
+  /* light yellow */
+  /* --color-primary: #f9f871; */
+
+  /* light orange */
+  /* --color-secondary: #ffc367; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #282c34;
-    --color-fg: #e9e9ea;
-  }
-}
+/* @media (prefers-color-scheme: dark) { */
+/*   :root { */
+/*     --color-bg: #5f4b66; */
+/*     --color-fg: white; */
+/*     --color-text: white; */
+/*   } */
+/* } */
 
 body {
-  color: var(--color-fg);
+  color: var(--color-text);
   background: var(--color-bg);
   font-family: var(--sans-font);
   font-size: var(--size-400);
 }
 
-h1 {
-  color: var(--color-fg);
-  font-size: var(--size-600);
-  font-weight: 600;
-  max-width: 15ch;
-  line-height: 1.1;
-}
-
+h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--color-fg);
-  font-size: var(--size-500);
   font-weight: 600;
   max-width: 25ch;
   line-height: 1.1;
 }
 
+h1 {
+  font-size: var(--size-800);
+  color: var(--color-primary);
+}
+
+h2 {
+  font-size: var(--size-700);
+}
+
+h3 {
+  font-size: var(--size-600);
+}
+
+h4
+h5,
+h6 {
+  font-size: var(--size-500);
+}
+
 a {
   color: var(--color-primary);
 }
+
+header,
+footer {
+  margin: 5rem 0;
+}
+
+pre {
+  font-size: 0.85rem;
+  border: none;
+  border-radius: var(--size-100);
+}
+
+pre[class*="language-"] {
+  min-width: 100%;
+  overflow: auto;
+  padding: var(--size-400);
+  margin-left: calc(var(--size-400) * -1);
+  margin-right: calc(var(--size-400) * -1);
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+  color: #fff;
+  background: black;
+  font-family: var(--mono-font);
+  font-feature-settings: normal;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
