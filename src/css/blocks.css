@@ -1,11 +1,23 @@
 /* site header */
 
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background: var(--color-bg);
+  position: sticky;
+  top: 0;
+}
+
 .site-header__brand {
-  font-size: var(--size-900);
+  font-size: var(--size-700);
+  font-weight: 700;
   text-decoration: none;
 }
 
-
+.site-header__arrow {
+  font-size: var(--size-700);
+}
 
 /* post list */
 

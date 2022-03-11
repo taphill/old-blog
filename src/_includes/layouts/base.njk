@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="{{ '/css/blocks.css' | url }}" />
   </head>
   <body>
-    {% include "partials/site-header.html" %}
-    <main tabindex="-1" id="main-content">
-      {% block content %}{% endblock %}
-    </main>
-    {% include "partials/site-footer.html" %}
+    <div id="root">
+      {% include "partials/site-header.njk" %}
+      <main tabindex="-1" id="main-content">
+        {% block content %}{% endblock %}
+      </main>
+      {% include "partials/site-footer.njk" %}
+    </div>
   </body>
 </html>

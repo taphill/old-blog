@@ -1,8 +1,9 @@
 ---
 title: Humble Ruby Values
-layout: layouts/post.html
+layout: layouts/post.njk
 displayOrder: 1
 permalink: "blog/{{ title | slugify }}/index.html"
+post: true
 ---
 
 # Humble Ruby Values
