@@ -1,11 +1,15 @@
 ---
 title: Humble Ruby Values
-layout: base.html
+layout: layouts/post.html
+displayOrder: 1
+permalink: "blog/{{ title | slugify }}/index.html"
 ---
+
+# Humble Ruby Values
 
 Each value belongs to a class. Some values like numbers,
 booleans, and nil are immutable, but all other values like
-strings, arrays, and hashes *are* mutable. Just like in
+strings, arrays, and hashes _are_ mutable. Just like in
 JavaScript, we point to these values using wires known as
 variables.
 
@@ -17,7 +21,7 @@ variables.
 the absence of value.
 
 In JavaScript you both `undefined` and `null` to represent the
-absence of a value. Usually, `null` is used for *intentionally*
+absence of a value. Usually, `null` is used for _intentionally_
 missing values while `undefined` usually represents a coding
 mistake that resulted in `undefined`. In ruby, `nil` is the
 special value that is reserved to indicate the absence of value.
@@ -52,19 +56,19 @@ shouldn't. It's not common you will write code that uses these
 special numbers.
 
 ```javascript
-let scale = 0;
-let a = 1 / scale;  // Infinity
-let b = 0 / scale;  // NaN
-let c = -a;         // -Infinity
-let d = 1 / c;      // -0
+let scale = 0
+let a = 1 / scale // Infinity
+let b = 0 / scale // NaN
+let c = -a // -Infinity
+let d = 1 / c // -0
 ```
 
 Ruby does not have special numbers. Anytime you divide by
 zero and error is thrown
 
 ```ruby
-1 / 0  #=> divided by 0 (ZeroDivisionError) 
-0 / 0  #=> divided by 0 (ZeroDivisionError) 
+1 / 0  #=> divided by 0 (ZeroDivisionError)
+0 / 0  #=> divided by 0 (ZeroDivisionError)
 ```
 
 And anything that would result in `-0` just becomes regular old

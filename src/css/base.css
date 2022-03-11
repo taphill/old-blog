@@ -1,5 +1,5 @@
 :root {
-  --sans-font: 'Asap', sans-serif;
+  --sans-font: "Asap", sans-serif;
 
   --mono-font: Consolas, source-code-pro, Menlo, Monaco, "Courier New",
     monospace;
@@ -25,11 +25,6 @@
   --color-grey-4: #52565c;
   --color-primary: #005248;
 
-  /* light yellow */
-  /* --color-primary: #f9f871; */
-
-  /* light orange */
-  /* --color-secondary: #ffc367; */
 }
 
 /* @media (prefers-color-scheme: dark) { */
@@ -37,6 +32,8 @@
 /*     --color-bg: #5f4b66; */
 /*     --color-fg: white; */
 /*     --color-text: white; */
+/*     --color-primary: #f9f871; */
+/*     --color-secondary: #ffc367; */
 /*   } */
 /* } */
 
@@ -70,7 +67,7 @@ h3 {
   font-size: var(--size-600);
 }
 
-h4
+h4,
 h5,
 h6 {
   font-size: var(--size-500);
@@ -78,6 +75,11 @@ h6 {
 
 a {
   color: var(--color-primary);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 header,
@@ -119,4 +121,3 @@ code[class*="language-"] {
   -ms-hyphens: none;
   hyphens: none;
 }
-

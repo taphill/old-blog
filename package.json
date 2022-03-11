@@ -6,8 +6,8 @@
   "main": "index.js",
   "license": "ISC",
   "scripts": {
-    "dev": "eleventy --serve",
-    "build": "eleventy",
+    "dev": "npx eleventy --serve",
+    "production": "NODE_ENV=production npx eleventy",
     "format": "prettier --write \"src/**/*.{html,css,js,md}\""
   },
   "dependencies": {

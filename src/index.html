@@ -1,0 +1,15 @@
+{% extends "layouts/base.html" %} {% block content %}
+<div class="wrapper">
+  <ul>
+    {% for post in posts %}
+    <li class="flow">
+      <h2>
+        <a class="post-list__item" href="{{ post.url }}">{{ post.title }}</a>
+      </h2>
+      <time>{{ post.date }}</time>
+      <p>{{ post.description }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+/* site header */
+
+.site-header__brand {
+  font-size: var(--size-900);
+  text-decoration: none;
+}
+
+
+
+/* post list */
+
+.post-list__item {
+  text-decoration: none;
+}
