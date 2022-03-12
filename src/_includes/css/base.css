@@ -1,6 +1,5 @@
 :root {
   --sans-font: "Asap", sans-serif;
-
   --mono-font: Consolas, source-code-pro, Menlo, Monaco, "Courier New",
     monospace;
 
@@ -16,29 +15,58 @@
   --size-800: calc(var(--base-size) * 2.441);
   --size-900: calc(var(--base-size) * 3.052);
 
-  --color-bg: white;
-  --color-fg: #5f4b66;
-  --color-text: black;
-  --color-grey-1: #d4d4d6;
-  --color-grey-2: #a9aaad;
-  --color-grey-3: #7e8085;
-  --color-grey-4: #52565c;
-  --color-primary: #005248;
+  --color-mode: "light";
+
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --grey-1: #d4d4d6;
+  --grey-2: #a9aaad;
+  --grey-3: #7e8085;
+  --grey-4: #52565c;
+  --dark-green: hsl(173, 100%, 16%);
+  --purple: hsl(284, 15%, 35%);
+  --light-yellow: hsl(60, 92%, 71%);
+  --light-orange: hsl(36, 100%, 70%);
+
+  --color-bg-light-mode: var(--white);
+  --color-fg-light-mode: var(--black);
+  --color-primary-light-mode: var(--dark-green);
+  --color-secondary-light-mode: var(--purple);
+
+  --color-bg-dark-mode: var(--purple);
+  --color-fg-dark-mode: var(--white);
+  --color-primary-dark-mode: var(--light-yellow);
+  --color-secondary-dark-mode: var(--light-orange);
+
+  --background: var(--color-bg-light-mode);
+  --text: var(--color-fg-light-mode);
+  --primary: var(--color-primary-light-mode);
+  --secondary: var(--color-secondary-light-mode);
 }
 
-/* @media (prefers-color-scheme: dark) { */
-/*   :root { */
-/*     --color-bg: #5f4b66; */
-/*     --color-fg: white; */
-/*     --color-text: white; */
-/*     --color-primary: #f9f871; */
-/*     --color-secondary: #ffc367; */
-/*   } */
-/* } */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: "dark";
+  }
+
+  :root:not([data-user-color-scheme]) {
+    --background: var(--color-bg-dark-mode);
+    --text: var(--color-fg-dark-mode);
+    --primary: var(--color-primary-dark-mode);
+    --secondary: var(--color-secondary-dark-mode);
+  }
+}
+
+[data-user-color-scheme="dark"] {
+  --background: var(--color-bg-dark-mode);
+  --text: var(--color-fg-dark-mode);
+  --primary: var(--color-primary-dark-mode);
+  --secondary: var(--color-secondary-dark-mode);
+}
 
 body {
-  color: var(--color-text);
-  background: var(--color-bg);
+  color: var(--text);
+  background: var(--background);
   font-family: var(--sans-font);
   font-size: var(--size-400);
 }
@@ -47,7 +75,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--color-fg);
+  color: var(--secondary);
   font-weight: 600;
   max-width: 25ch;
   line-height: 1.1;
@@ -55,7 +83,7 @@ h4 {
 
 h1 {
   font-size: var(--size-800);
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
 h2 {
@@ -73,7 +101,7 @@ h6 {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
 ul {

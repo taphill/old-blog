@@ -11,10 +11,15 @@
       href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{ '/css/reset.css' | url }}" />
-    <link rel="stylesheet" href="{{ '/css/base.css' | url }}" />
-    <link rel="stylesheet" href="{{ '/css/utilities.css' | url }}" />
-    <link rel="stylesheet" href="{{ '/css/blocks.css' | url }}" />
+    {% set css %}
+      {% include "css/reset.css" %}
+      {% include "css/base.css" %}
+      {% include "css/utilities.css" %}
+      {% include "css/blocks.css" %}
+    {% endset %}
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
   </head>
   <body>
     <div id="root">
@@ -25,4 +30,11 @@
       {% include "partials/site-footer.njk" %}
     </div>
   </body>
+
+  {% set js %}
+    {% include "scripts/main.js" %}
+  {% endset %}
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
 </html>

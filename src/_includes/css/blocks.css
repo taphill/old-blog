@@ -4,9 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  background: var(--color-bg);
   position: sticky;
   top: 0;
+  background: var(--background);
 }
 
 .site-header__brand {
@@ -23,4 +23,12 @@
 
 .post-list__item {
   text-decoration: none;
+}
+
+/* color mode toggle button */
+
+.color-mode-toggle {
+  border: none;
+  border-radius: 4px;
+  padding: var(--size-100);
 }
